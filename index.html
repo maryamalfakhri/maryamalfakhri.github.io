@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet"href="style.css">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </head>
+    <style>
+        
+          #particles-js {
+            position: fixed; /* Fixed for parallax */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Behind other content */
+        }
+body{
+    height: 2000px;
+}
+        .navbar-transparent-white{
+        background-color: rgba(240, 248, 255, 0.7);
+        backdrop-filter: blur(10);
+        }
+        .navbar-nav{
+            text-align: center;
+        }
+        .navbar .navbar-brand{
+            color: rgb(142,70,69);
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 30px;
+        }
+     
+        .hero{
+            background-color: rgb(142, 70, 69);
+            color: aliceblue;
+            padding-top: 30px;
+            text-align: center;
+        }
+        .my-links a{
+            padding: 0px 7px;
+        }
+        .navbar-toggler{  
+            width: 70px;
+            height: 40px;
+            border: none;
+        }
+        ion-icon{
+            padding: 2px 0px;
+            background-color:rgba(237, 154, 153, 0.324) ;
+            border-radius: 15px;
+            width: 40px;
+            height: 20px;
+           color:rgb(255, 255, 255) ;
+        }
+        .my-icon{
+            margin: 30px 0px;
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+        }
+        .about{
+            display: grid;
+            gap:1rem;
+            grid-template-areas: 'data data'
+                                'project exp';
+        }
+        .data{
+            grid-area: data;
+        }
+        .project{
+            grid-area: project;
+        }
+        .exp{
+            grid-area: exp;
+        }
+        .project , .exp , .data{
+            padding: 10px;
+            border-radius: 20px;
+            background-color: rgb(251, 246, 246);
+        }
+        .exp , .project{
+            text-align: center;
+        }
+        .about p{
+            font-weight: 150;
+        }
+        @media (min-width:992px){
+            .about{
+                grid-template-columns:2fr 1fr ;
+                grid-template-areas: 'data project'
+                                       ' data exp';
+                                       align-items:stretch;
+            }
+        }
+        .icon{
+           width: 30px;
+           height: 20px;
+           transform: translateY(5px);
+           margin-right: 7px;
+
+        }
+        .about-icon{
+            padding-top: -5px;
+            padding:3px;
+           width: 150px;
+            border-radius: 20px;
+            font-weight: 100;
+            font-size: 15px;
+
+        }
+
+    </style>
+   
+     <body>
+         <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+       
+             <div id="particles-js"></div>
+             <script>
+                 particlesJS("particles-js", {
+                  "particles": {
+                "number": {
+                    "value": 80,  // Adjust the number of particles
+                    "density": {
+                        "enable": true,
+                        "value_area": 850
+                    }
+                },
+                "color": {
+                    "value": "#d99e9d" // Slightly darker particle color
+                },
+                "shape": {
+                    "type": "edge", // You can use "circle", "edge", "triangle", "polygon", "star", "image"
+                    "stroke": {
+                        "width": 0,  // Set to 0 for no outline
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                },
+                "opacity": {
+                    "value": 0.4,   // Adjust opacity
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,  // Adjust particle size
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,  // Connect particles with lines
+                    "distance": 150,  // Adjust connection distance
+                    "color": "#763938", // Line color
+                    "opacity": 0.3,    // Line opacity
+                    "width": 1          // Line width
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,         // Adjust particle speed
+                    "direction": "none",
+                    "random": false,    // Random movement or not
+                    "straight": false,  // Straight or curved movement
+                    "out_mode": "out",   // Behavior when particles go off-screen
+                    "bounce": false,
+                    "attract": {        // Enable particle attraction/repulsion
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas", // Detect mouse interactions on the canvas
+                "events": {
+                    "onhover": {
+                        "enable": true,     // Enable hover effects
+                        "mode": "grab"    // "grab" to attract particles to the mouse
+                    },
+                    "onclick": {
+                        "enable": true,       // Enable click effects
+                        "mode": "push"     // "push" to emit new particles
+                    },
+                    "resize": true        // Resize the canvas with the window
+                },
+                "modes": {
+
+                    "grab": {          // Settings for the "grab" mode
+                        "distance": 200, // Distance from mouse to affect particles
+                        "line_linked": {
+                            "opacity": 1   // Opacity of lines when grabbing
+                        }
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+
+                }
+            },
+            "retina_detect": true // For high-resolution displays
+        });
+
+    </script>
+        <header>
+                 <nav class="navbar navbar-expand-lg  navbar-transparent-white sticky-top">
+                     <div class="container-fluid">
+                         <a class="navbar-brand" href="#">MARO</a>
+                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                             <span class="navbar-toggler-icon"></span>
+                         </button>
+                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                 <li class="nav-item">
+                                     <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a class="nav-link" href="#about">About me</a>
+                                 </li>
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link" href="#" >Contact</a>
+                                 </li>  
+                         </div>
+                     </div>
+                 </nav>
+                 <div class="hero">
+                     <h1>Maryam Alfakhri</h1>
+                     <h6>Problem Solver & Web Developer</h3>
+                         <div class="my-links">
+                            <i class="bi bi-github"></i>
+                          <a target="_blank" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
+                          <a target="_blank" href="https://github.com/maryamalfakhri"><ion-icon class="social-icon" name="logo-github"></ion-icon></a>
+                         </div>
+                         <img class="my-icon" src="icon.jpg">
+                 </div>
+                </header>
+                <main class="container mx-auto px-4 py-8">
+                    <section id="about">
+                        <p class="text-center fw-bold fs-2" style="color:rgb(158, 99, 99) ; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">About Me</p>
+              <div class="container about text-start mx-auto fw-bold fs-5 " style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ">
+                     <div class="data">Problem Solver & Web Developer<p>Analytical problem solver and web developer with strong problem-solving skills,
+                        focusing on creating effcient user-friendly web solutions.</p>
+                         <div style="display: flex; justify-content:space-around;">
+                         <div class="about-icon" style="background-color: rgb(208, 226, 237);"><ion-icon class="icon" style="background-color: rgb(208, 226, 237);
+            color:blue" name="analytics-sharp"></ion-icon>Data Analyst</div>
+                         <div class="about-icon " style="background-color: rgb(203, 232, 199);" ><ion-icon class="icon" style="color: rgb(123, 173, 109); background-color: rgb(203, 232, 199);" name="code-slash-sharp"></ion-icon>Web Developer</div>
+                        </div></div>
+                     <div class="project">projects<p> 2</p></div>
+                     <div class="exp">Experience<p>One year</p></div>
+                     </div>
+                
+             </div>
+</section>
+         </main>
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+   
+    </body>
+</html>
