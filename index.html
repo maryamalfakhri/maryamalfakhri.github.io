@@ -19,9 +19,7 @@
             height: 100%;
             z-index: -1; /* Behind other content */
         }
-body{
-    height: 2000px;
-}
+
         .navbar-transparent-white{
         background-color: rgba(240, 248, 255, 0.7);
         backdrop-filter: blur(10);
@@ -111,7 +109,22 @@ body{
             border-radius: 20px;
             font-weight: 100;
             font-size: 15px;
-
+        }
+        section{
+            margin-top: 15px;
+        }
+        .education{
+            margin-bottom: 40px ;
+            grid-template-columns: 1fr;
+            display: flex;
+            background-color: rgb(251, 246, 246);
+            border-radius: 20px;
+           width: 490px;
+        }
+        .education ion-icon{
+            height: 40px;
+            width: 50px;
+            transform: translateY(15px);
         }
 
     </style>
@@ -232,8 +245,9 @@ body{
                                      <a class="nav-link" href="#about">About me</a>
                                  </li>
                                  <li class="nav-item dropdown">
-                                     <a class="nav-link" href="#" >Contact</a>
+                                     <a class="nav-link" href="#education" >Education</a>
                                  </li>  
+     
                          </div>
                      </div>
                  </nav>
@@ -241,7 +255,7 @@ body{
                      <h1>Maryam Alfakhri</h1>
                      <h6>Problem Solver & Web Developer</h3>
                          <div class="my-links">
-                            <i class="bi bi-github"></i>
+                            
                           <a target="_blank" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
                           <a target="_blank" href="https://github.com/maryamalfakhri"><ion-icon class="social-icon" name="logo-github"></ion-icon></a>
                          </div>
@@ -264,8 +278,27 @@ body{
                      </div>
                 
              </div>
-</section>
+                     </section>
+                     <section id="education">
+                        <p class="text-center fw-bold fs-2" style="color:rgb(158, 99, 99) ; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Education</p>
+                        <div class="container mx-auto education">
+                             <div >
+                                <ion-icon  class="icon" style=" color: rgb(89, 46, 100); background-color: rgb(245, 237, 237);" name="book-sharp"></ion-icon></div>
+                            <div class="uni fw-bold fs-5" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Computer Science<p style="font-weight: 150;">University of Benghazi, Benghazi, Libya</p></div>
+
+                        </div>
+                     </section>
          </main>
+         <footer>
+         <div class="container text-center " style="background-color:rgb(142, 70, 69)  ; padding-top: 10px;">
+            <p style="color: aliceblue; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">© 2026 Maryam Alfakhri. All rights reserved</p>
+                  <div class="my-links">
+                          <a target="_blank" href="https://www.facebook.com/"><ion-icon class="social-icon" name="logo-facebook"></ion-icon></a>
+                          <a target="_blank" href="mailto:maryamalfakhri5@gmail.com"><ion-icon class="social-icon" name="mail"></ion-icon></a>
+                          <a target="_blank" href="https://github.com/maryamalfakhri"><ion-icon class="social-icon" name="logo-github"></ion-icon></a>
+                         </div>
+         </div>
+         </footer>
          <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
          <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    
