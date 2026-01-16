@@ -115,16 +115,23 @@
         }
         .education{
             margin-bottom: 40px ;
-            grid-template-columns: 1fr;
-            display: flex;
+            display: grid;
+            grid-template-columns:1fr 15fr ;
             background-color: rgb(251, 246, 246);
             border-radius: 20px;
-           width: 490px;
+           
         }
         .education ion-icon{
             height: 40px;
             width: 50px;
             transform: translateY(15px);
+        }
+         @media (min-width:992px){
+            .education{
+                grid-template-columns:1fr 15fr ;
+                                       align-items:stretch;
+                                       width: 50%;
+            }
         }
 
     </style>
